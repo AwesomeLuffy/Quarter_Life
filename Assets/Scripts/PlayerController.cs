@@ -39,6 +39,7 @@ namespace UnityTutorial.PlayerControl
         private const float _runSpeed = 6f;
 
         private Vector2 _currentVelocity;
+
         
         void Start()
         {
@@ -54,6 +55,7 @@ namespace UnityTutorial.PlayerControl
             _groundHash = Animator.StringToHash("Grounded");
             _fallingHash = Animator.StringToHash("Falling");
             _crouchHash = Animator.StringToHash("Crouch");
+
         }
 
         private void FixedUpdate()

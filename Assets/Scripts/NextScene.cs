@@ -13,18 +13,21 @@ public class NextScene : MonoBehaviour
     public Image _backgroundNextScene;
     public TextMeshProUGUI _textNextScene;
     private bool isNextScene;
+    private AudioSource _useButtonSource;
 
     private void Start()
     {
         _textNextScene.enabled = false;
         _backgroundNextScene.enabled = false;
         isNextScene = false;
+        _useButtonSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if (isNextScene && Input.GetKeyDown(KeyCode.E))
         {
+            _useButtonSource.Play();
             nextScene();
         }
     }

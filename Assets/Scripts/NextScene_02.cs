@@ -16,6 +16,7 @@ public class NextScene_02 : MonoBehaviour
     private bool isNextScene;
     private bool isAnswer;
     private bool isWriting;
+    private AudioSource[] _useButtonEffect;
 
     private void Start()
     {
@@ -30,18 +31,20 @@ public class NextScene_02 : MonoBehaviour
         isAnswer = false;
         isWriting = false;
         _textAnswer.enabled = false;
+
+        _useButtonEffect = this.GetComponents<AudioSource>();
         Debug.Log("Start(3/3)");
     }
 
     void Update()
     {
-        Debug.Log("size = " + _textAnswer.text.Length);
         if (isWriting)
         {
             keyboardEntry();
             if (_textAnswer.text.Length > 3)
             {
                 _textAnswer.text = "XXX";
+                _useButtonEffect[1].Play();
             }
         }
         if (isNextScene && (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return)))
@@ -56,6 +59,7 @@ public class NextScene_02 : MonoBehaviour
                 else
                 {
                     _textAnswer.text = "XXX";
+                    _useButtonEffect[1].Play();
                 }
                 isWriting = false;
             }
@@ -72,6 +76,8 @@ public class NextScene_02 : MonoBehaviour
             _backgroundNextScene.enabled = true;
             if (isNextScene && Input.GetKeyDown(KeyCode.E))
             {
+                _useButtonEffect[0].Play();
+                if(BackgroundMusic.Instance != null){ Destroy(BackgroundMusic.Instance.gameObject); }
                 nextScene();
             }
         }
