@@ -27,7 +27,9 @@ public class NextScene : MonoBehaviour
     {
         if (isNextScene && Input.GetKeyDown(KeyCode.E))
         {
-            _useButtonSource.Play();
+            if (this._useButtonSource != null) {
+                _useButtonSource.Play();
+            }
             nextScene();
         }
     }

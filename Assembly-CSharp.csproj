@@ -43,6 +43,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
+     <Compile Include="Assets\Scripts\TriggerPlatform.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\NextScene_02.cs" />
      <Compile Include="Assets\Scripts\FindMissingScriptsRecursively.cs" />
@@ -50,8 +52,6 @@
      <Compile Include="Assets\Scripts\EndMenu.cs" />
      <Compile Include="Assets\Scripts\SettingsMenu.cs" />
      <Compile Include="Assets\Scripts\NextScene.cs" />
-     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
-     <Compile Include="Assets\Scripts\TriggerPlatform.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
